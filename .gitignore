@@ -1,0 +1,13 @@
+# macOS 系統檔
+.DS_Store
+**/.DS_Store
+
+# 備份與暫存（不要上架）
+_backup_*/
+0606備檔/
+_migrate.py
+index-check.png
+.playwright-mcp/
+
+# 未使用的舊函式庫
+js/jquery-3.7.0.min.js
