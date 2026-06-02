@@ -1528,3 +1528,186 @@ section#project-title img.pic {
     width: 18px;
     height: auto;
 }
+
+
+/* --------------- 新作品圖文混合內頁（積木） --------------- */
+.introduction.case-body {
+    padding: 40px 48px 10px;
+}
+
+.case-block {
+    margin-bottom: 44px;
+}
+
+.case-block:last-of-type {
+    margin-bottom: 24px;
+}
+
+.case-eyebrow {
+    font-family: 'Roboto', sans-serif;
+    font-size: .8rem;
+    letter-spacing: .15rem;
+    color: #9a9a9a;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.case-title {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1E1E1E;
+    padding-left: 14px;
+    border-left: 4px solid #D7F367;
+    margin-bottom: 16px;
+    letter-spacing: .05rem;
+}
+
+.case-text {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: .95rem;
+    line-height: 1.95;
+    color: #3a3a3a;
+    margin-bottom: 1rem;
+}
+
+.case-text:last-child {
+    margin-bottom: 0;
+}
+
+/* 全寬圖 + 圖說 */
+.case-figure {
+    margin: 22px 0;
+}
+
+.case-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.case-cap {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: .8rem;
+    color: #9a9a9a;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* 圖 + 文 左右並排 */
+.case-cols {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin: 22px 0;
+}
+
+.case-cols .case-col-text,
+.case-cols .case-col-img {
+    flex: 1;
+}
+
+.case-cols .case-col-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* 方形社群圖網格（兩欄） */
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 18px 0;
+}
+
+.case-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* 重點清單 */
+.case-list {
+    margin: 4px 0 0;
+    padding: 0;
+}
+
+.case-list li {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: .95rem;
+    line-height: 1.8;
+    color: #3a3a3a;
+    padding-left: 20px;
+    position: relative;
+    list-style: none;
+}
+
+.case-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .7em;
+    width: 7px;
+    height: 7px;
+    background: #D7F367;
+    border-radius: 50%;
+}
+
+/* 數據 */
+.case-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 48px;
+    margin: 8px 0;
+    padding: 0;
+}
+
+.case-stats li {
+    list-style: none;
+}
+
+.case-stats .stat-num {
+    display: block;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 2rem;
+    color: #1E1E1E;
+}
+
+.case-stats .stat-label {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: .85rem;
+    color: #6a6a6a;
+}
+
+@media (max-width: 1095px) {
+    .introduction.case-body {
+        padding: 30px 24px 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .introduction.case-body {
+        padding: 24px 18px 10px;
+    }
+
+    .case-cols {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .case-stats {
+        gap: 20px 32px;
+    }
+
+    .case-stats .stat-num {
+        font-size: 1.6rem;
+    }
+
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+}
