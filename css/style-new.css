@@ -1,0 +1,135 @@
+/* =========================================================
+   Vera Liu — 極簡淺色版（試做 / proof）
+   參考風格：jacksonalexander.com.au（瑞士極簡工作室風）
+   ========================================================= */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #F4F4F2;
+  --surface: #FFFFFF;
+  --ink: #1A1A1A;
+  --muted: #8A8A8A;
+  --line: #E2E2DE;
+  --lime: #D7F367;
+  --radius: 14px;
+  --maxw: 1240px;
+  --pad: 40px;
+}
+
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+body {
+  font-family: 'Inter', -apple-system, "Noto Sans TC", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+
+/* ---------- 導覽列 ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(244,244,242,.82);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: var(--maxw); margin: 0 auto; padding: 16px var(--pad);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { font-weight: 500; font-size: 15px; letter-spacing: -0.02em; }
+.brand span { color: var(--muted); font-weight: 400; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a { font-size: 14px; color: var(--muted); transition: color .2s; }
+.nav-links a:hover { color: var(--ink); }
+.nav-cta {
+  background: var(--lime); color: var(--ink) !important;
+  padding: 8px 16px; border-radius: 100px; font-weight: 500;
+}
+.nav-cta:hover { filter: brightness(.95); }
+
+/* ---------- Hero ---------- */
+.hero { padding: 96px 0 72px; }
+.hero .eyebrow {
+  font-size: 13px; color: var(--muted); letter-spacing: 0.04em;
+  text-transform: uppercase; margin-bottom: 28px;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero .eyebrow::before {
+  content: ""; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--lime);
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  font-weight: 500; line-height: 1.04; letter-spacing: -0.035em;
+  max-width: 16ch;
+}
+.hero h1 em { font-style: normal; color: var(--muted); }
+.hero .sub {
+  margin-top: 28px; max-width: 52ch; color: #555;
+  font-size: 17px; line-height: 1.6;
+}
+.hero .tags { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 8px; }
+.hero .tags span {
+  font-size: 13px; color: #444; border: 1px solid var(--line);
+  background: var(--surface); padding: 7px 14px; border-radius: 100px;
+}
+
+/* ---------- 作品 ---------- */
+.work { padding: 24px 0 96px; }
+.work-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding-bottom: 24px; margin-bottom: 36px; border-bottom: 1px solid var(--line);
+  flex-wrap: wrap; gap: 16px;
+}
+.work-head h2 { font-size: 15px; font-weight: 500; }
+.filters { display: flex; flex-wrap: wrap; gap: 18px; }
+.filters a { font-size: 14px; color: var(--muted); transition: color .2s; cursor: pointer; }
+.filters a:hover, .filters a.active { color: var(--ink); }
+
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px 40px; }
+
+.card { display: block; }
+.card .thumb {
+  position: relative; overflow: hidden; border-radius: var(--radius);
+  background: var(--surface); aspect-ratio: 4 / 3;
+}
+.card .thumb img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.card:hover .thumb img { transform: scale(1.04); }
+.card .meta {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-top: 16px; gap: 16px;
+}
+.card .meta h3 { font-size: 15px; font-weight: 500; letter-spacing: -0.01em; }
+.card .meta .cat { font-size: 13px; color: var(--muted); white-space: nowrap; }
+
+/* ---------- 頁尾 ---------- */
+.foot { border-top: 1px solid var(--line); padding: 80px 0 40px; }
+.foot .cta { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; }
+.foot .cta a { border-bottom: 2px solid var(--lime); }
+.foot .cta a:hover { background: var(--lime); }
+.foot-row {
+  margin-top: 56px; display: flex; justify-content: space-between;
+  flex-wrap: wrap; gap: 20px; color: var(--muted); font-size: 14px;
+}
+.foot-row .links { display: flex; gap: 24px; }
+.foot-row .links a:hover { color: var(--ink); }
+
+/* ---------- RWD ---------- */
+@media (max-width: 760px) {
+  :root { --pad: 22px; }
+  .nav-links { gap: 16px; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .hero { padding: 64px 0 48px; }
+  .grid { grid-template-columns: 1fr; gap: 36px; }
+}
