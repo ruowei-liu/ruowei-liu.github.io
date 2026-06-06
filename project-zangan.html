@@ -3,117 +3,56 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <title>蘵感美學補習班 UIUX 與前端切版 | Vera Liu</title>
-
-    <link rel="shortcut icon" href="./images/index/link.png">
-    <meta name="description" content="蘵感美學補習班官網的 UI/UX 設計與 HTML/CSS 前端切版實作。" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>蘵感美學補習班 UIUX 與前端切版 | Vera Liu</title>
+    <meta name="description" content="蘵感美學補習班官網的 UI/UX 設計與 HTML/CSS 前端切版實作。" />
+    <link rel="shortcut icon" href="./images/index/link.png">
 
     <meta property="og:title" content="蘵感美學補習班 UIUX 與前端切版 | Vera Liu" />
     <meta property="og:description" content="蘵感美學補習班官網的 UI/UX 設計與 HTML/CSS 前端切版實作。" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ruowei-liu.github.io/project-zangan.html" />
     <meta property="og:image" content="https://ruowei-liu.github.io/images/Project/Project-2.png" />
-
     <link href="./images/index/apple.png" rel="apple-touch-icon" />
 
-
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <!-- 自己寫的 css -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- 官網的 js -->
-    <script src="./js/layout.js"></script>
-    <!-- 圖片篩選 js -->
-    <script src="./js/main.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style-new.css">
+    <script src="./js/layout-new.js"></script>
 </head>
 
 <body>
-    <!---------- 內容 ---------->
-    <div class="myproject">
-        <section id="project-name">
-            <main class="project-main">
-                <div class="mob-name">
-                    <h4 class="en-4">PROJECT</h4>
-                    <!-- 專案名稱 -->
-                    <h1 class="ch-1">蘵感美學補習班</h1>
-                    <h1 class="ch-1">UIUX 前端切版</h1>
+    <main class="wrap project">
+        <div class="proj-layout">
+            <aside class="proj-side">
+                <p class="eyebrow">UI/UX</p>
+                <h1>蘵感美學補習班 UIUX 前端切版</h1>
+                <p class="proj-intro">2023美學課程問卷調研、形象網站UIUX設計、完成登入＆註冊頁切版。</p>
+                <div class="proj-side-meta">
+                    <div><span>Date</span><p>March , 2023</p></div>
+                    <div><span>Client</span><p>產業新尖兵計畫</p></div>
+                    <div><span>Role</span><p>Planner &amp; Designer</p></div>
+                    <div><span>Type</span><p>UI/UX</p></div>
                 </div>
-                <!-- 精簡特點 -->
-                <div class="mob-hightlight">
+            </aside>
 
-                    <div class="skills">
-                        <h4 class="en-4"><a href="./index.html?category=uiux">UI UX</a></h4>
-                        <h4 class="en-4"><a href="./index.html?category=htmlcss">Front-end Website</a></h4>
-                      </div>
-
-                    <div class="hightlight">
-                        <img loading="lazy" decoding="async" src="./images/Project/project-symbol.svg" alt="">
-                        <h4 class="ch-4">2023美學課程問卷調研</h4>
-                    </div>
-                    <div class="hightlight">
-                        <img loading="lazy" decoding="async" src="./images/Project/project-symbol.svg" alt="">
-                        <h4 class="ch-4">形象網站UIUX設計</h4>
-                    </div>
-                    <div class="hightlight-last">
-                        <img loading="lazy" decoding="async" src="./images/Project/project-symbol.svg" alt="">
-                        <h4 class="ch-4">完成登入＆註冊頁切版</h4>
-                    </div>
+            <div class="proj-main">
+                <div class="proj-gallery">
+                    <img loading="lazy" src="./images/Project/Project-2.png" alt="蘵感美學補習班 UIUX 前端切版 封面">
+                    <img loading="lazy" src="./images/Project/Project-2_1(web).png" alt="">
+                    <img loading="lazy" src="./images/Project/Project-2_2(web).png" alt="">
+                    <img loading="lazy" src="./images/Project/Project-2_gif.gif" alt="">
+                    <img loading="lazy" src="./images/Project/Project-2_3(web).png" alt="">
                 </div>
-
-                <!-- 時間 -->
-                <div class="note">
-                    <h3 class="en-3">DATE</h3>
-                    <h3 class="ch-3">March , 2023</h3>
-                    <h3 class="en-3">CLIENT/COMPANY</h3>
-                    <h3 class="ch-3">產業新尖兵計畫</h3>
-                    <h3 class="en-3">PLANNER & DESIGNER</h3>
-                    <h3 class="ch-3">Vera liu、Chenxuan、Siyong</h3>
-                    <h3 class="en-3">Web developmentR</h3>
-                    <h3 class="ch-3">Siyong、Chenxuan、Vera liu</h3>
-                    <a class="button" href="./index.html">
-                        <img loading="lazy" decoding="async" src="./images/Project/project-symbol(smell).svg" alt="arrow">
-                        <h3 class="ch-3">Back to home</h3>
-                    </a>
-                </div>
-            </main>
-        </section>
-
-        <section id="project-title">
-            <!-- 放上作品封面 -->
-            <img loading="lazy" decoding="async" class="banner" src="./images/Project/Project-2.png" alt="myfeel">
-            <div class="introduction">
-                <!-- 放上作品介紹 -->
-                <img loading="lazy" decoding="async" class="pic pic-web" src="./images/Project/Project-2_1(web).png" alt="">
-                <img loading="lazy" decoding="async" class="pic pic-mob" src="./images/Project/Project-2_1(mob).png" alt="">
-
-                <img loading="lazy" decoding="async" class="pic pic-web" src="./images/Project/Project-2_2(web).png" alt="">
-                <img loading="lazy" decoding="async" class="pic pic-mob" src="./images/Project/Project-2_2(mob).png" alt="">
-
-                <img loading="lazy" decoding="async" class="pic pic-web" src="./images/Project/Project-2_gif.gif" alt="">
-                <img loading="lazy" decoding="async" class="pic pic-mob" src="./images/Project/Project-2_gif.gif"  alt="">
-
-                <img loading="lazy" decoding="async" class="pic pic-web" src="./images/Project/Project-2_3(web).png" alt="">
-                <img loading="lazy" decoding="async" class="pic pic-mob" src="./images/Project/Project-2_3(mob).png" alt="">
-
             </div>
-            <!-- 上一個專案/下一個專案按鈕 -->
-            <div class="next-project">
-                <a href="./project-MYFEEL UIUX.html">
-                    <img loading="lazy" decoding="async" src="./images/Project/project-arrow(left).svg" alt="Previous project">
-                    <h4 class="ch-4">Previous project</h4>
-                </a>
-                <a href="./project-HAVBEAT UI.html">
-                    <h4 class="ch-4">Next project</h4>
-                    <img loading="lazy" decoding="async" src="./images/Project/project-arrow(right).svg" alt="Nextproject">
-                </a>
-            </div>
+        </div>
 
-        </section>
-
-    </div>
+        <nav class="proj-nav">
+            <a href="./project-MYFEEL UIUX.html"><span>Previous</span>MYFEEL 集資平台</a>
+            <a class="next" href="./project-HAVBEAT UI.html"><span>Next project</span>HAVBEAT 運動平台 →</a>
+        </nav>
+    </main>
 </body>
 
 </html>

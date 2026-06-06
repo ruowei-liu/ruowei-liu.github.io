@@ -3,167 +3,123 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vera Liu | Projects 作品集</title>
-
-    <link rel="shortcut icon" href="./images/index/link.png">
-    <meta name="description" content="Vera Liu 的設計作品集，涵蓋商業設計、UI/UX、前端網頁與 3D 設計作品。Designer based in Taipei." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vera Liu — Designer &amp; Front-end Developer</title>
+    <meta name="description" content="Vera Liu — 來自台北的設計師暨前端工程師，專注商業設計與 UI/UX。" />
+    <link rel="shortcut icon" href="./images/index/link.png">
 
-
-    <meta property="og:title" content="Vera Liu | Projects 作品集" />
-    <meta property="og:description" content="Vera Liu 的設計作品集，涵蓋商業設計、UI/UX、前端網頁與 3D 設計作品。Designer based in Taipei." />
+    <meta property="og:title" content="Vera Liu — Designer & Front-end Developer" />
+    <meta property="og:description" content="Vera Liu — 來自台北的設計師暨前端工程師，專注商業設計與 UI/UX。" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ruowei-liu.github.io/index.html" />
+    <meta property="og:url" content="https://ruowei-liu.github.io/" />
     <meta property="og:image" content="https://ruowei-liu.github.io/images/index/FB.png" />
-
     <link href="./images/index/apple.png" rel="apple-touch-icon" />
 
-
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <!-- 自己寫的 css -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- 官網的 js -->
-    <script src="./js/layout.js"></script>
-    <!-- 圖片篩選 js -->
-    <script src="./js/main.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style-new.css">
+    <script src="./js/layout-new.js"></script>
 </head>
 
 <body>
-    <main>
-        <!---------- 標題 ---------->
-        <section class="title">
-            <div class="author">
-                <h1 class="en-1">Interesting things created by Vera Liu</h1>
-                <img loading="lazy" decoding="async" src="./images/index/important symbol.svg" class="rotate-image" alt="symbol">
+    <main class="wrap">
+        <!-- Hero -->
+        <section class="hero">
+            <p class="eyebrow">Designer &amp; Front-end Developer · Taipei</p>
+            <h1>Designing brands &amp; interfaces<br><em>that work as well as they look.</em></h1>
+            <p class="sub">
+                Hi，我是 Vera Liu — 來自台北的設計師暨前端工程師。專注商業設計與 UI/UX，
+                在意設計的可行性與易用性，也喜歡在常規之外找到對的切入點。
+            </p>
+            <div class="tags">
+                <span>Graphic Design</span>
+                <span>UI/UX</span>
+                <span>Front-end</span>
+                <span>3D Design</span>
+                <span>Video</span>
             </div>
-
-            <!-- 跑馬燈 -->
-            <div class="projectof">
-                <div class="special-heading">Project of</div>
-
-                <div class="slideshow">
-                    <img loading="lazy" decoding="async" id="slide1" class="slide active" src="./images/index/text-1.svg" alt="skill">
-                    <img loading="lazy" decoding="async" id="slide2" class="slide" src="./images/index/text-2.svg" alt="skill">
-                    <img loading="lazy" decoding="async" id="slide3" class="slide" src="./images/index/text-3.svg" alt="skill">
-                    <img loading="lazy" decoding="async" id="slide4" class="slide" src="./images/index/text-4.svg" alt="skill">
-                    <img loading="lazy" decoding="async" id="slide5" class="slide" src="./images/index/text-5.svg" alt="skill">
-                </div>
-
-            </div>
-            <h3 class="en-3">Hi, I have some works to share with you. Please choose your preferred category by clicking the buttons below!</h3>
-            <div class="skills">
-                <h4 class="en-4"><a href="#" onclick="filterProjects('all')">All Design</a></h4>
-                <h4 class="en-4"><a href="#" onclick="filterProjects('graphic')">Graphic Design</a></h4>
-                <h4 class="en-4"><a href="#" onclick="filterProjects('uiux')">UI UX</a></h4>
-                <h4 class="en-4"><a href="#" onclick="filterProjects('htmlcss')">Front-end Website</a></h4>
-                <h4 class="en-4"><a href="#" onclick="filterProjects('Three-dimensional')">3D Design</a></h4>
-                <h4 class="en-4"><a href="#" onclick="filterProjects('video')">Video Editor</a></h4>
-              </div>
-
         </section>
 
-        <!---------- 專案列表 ---------->
-        <section class="project">
-            <a href="./project-ecommerce.html" class="project-item graphic">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/marketing/618-marais-1.jpg" alt="電商節慶檔期行銷視覺設計">
-                    </div>
-                    <h4 class="ch-4">電商行銷視覺 — 節慶檔期主視覺設計</h4>
-                </article>
-            </a>
-            <a href="./project-ads.html" class="project-item graphic">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/ads/belkin-1.jpg" alt="品牌產品集資廣告社群素材">
-                    </div>
-                    <h4 class="ch-4">品牌產品廣告 — 集資社群素材</h4>
-                </article>
-            </a>
-            <a href="./project-MYFEEL UIUX.html" class="project-item uiux">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/Project/Project-1.png" alt="project">
-                    </div>
-                    <h4 class="ch-4">跨國群眾集資平台 MYFEEL UIUX 官網設計</h4>
-                </article>
-            </a>            
-            <a href="./project-zangan.html" class="project-item  uiux htmlcss">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/Project/Project-2.png" alt="project">
-                    </div>
-                    <h4 class="ch-4">蘵感美學補習班 UIUX 前端切版</h4>
-                </article>
-            </a>
-            <a href="./project-HAVBEAT UI.html" class="project-item uiux">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/Project/Project-3.png" alt="project">
-                    </div>
-                    <h4 class="ch-4">HAVBEAT 線上運動課程平台 UI 官網設計</h4>
-                </article>
-            </a>
-            <a href="./project-YSOLAR UI.html" class="project-item uiux">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/Project/Project-4.png" alt="project">
-                    </div>
-                    <h4 class="ch-4">力陽能源 形象官網UI設計</h4>
-                </article>
-            </a>
-            <a href="./project-travel.html" class="project-item uiux">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/Project/Project-5.png" alt="project">
-                    </div>
-                    <h4 class="ch-4">高端旅遊 UI 官網設計</h4>
-                </article>
-            </a>
-            <a href="./project-Turtle Island UIUX.html" class="project-item uiux">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/Project/Project-6.png" alt="project">
-                    </div>
-                    <h4 class="ch-4">龜山島線上登島申請網站 UIUX設計</h4>
-                </article>
-            </a>
-            <a href="./project-FEEL2.html" class="project-item  Three-dimensional video">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/Project/Project-7.png" alt="project">
-                    </div>
-                    <h4 class="ch-4">FEEL2 兩種感官 共感音樂唱盤教具</h4>
-                </article>
-            </a>
-            <a href="./project-2023 MYFEEL CIS.html" class="project-item graphic ">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/Project/Project-8.png" alt="project">
-                    </div>
-                    <h4 class="ch-4"> 2023 MYFEEL CIS 企業形象識別設計</h4>
-                </article>
-            </a>
-            <a href="./project-Belkin.html" class="project-item graphic video">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/Project/Project-9.png" alt="project">
-                    </div>
-                    <h4 class="ch-4">Belkin SOUNDFORM Immerse 降噪式耳機 集資專案</h4>
-                </article>
-            </a>
-            <a href="./project-PHILIPS.html" class="project-item graphic video">
-                <article>
-                    <div class="image-container">
-                        <img loading="lazy" decoding="async" class="box" src="./images/Project/Project-10.png" alt="project">
-                    </div>
-                    <h4 class="ch-4">PHILIPS飛利浦 白小奈 奈米級抗敏空氣清淨機 集資專案</h4>
-                </article>
-            </a>
+        <!-- 作品 -->
+        <section class="work">
+            <div class="work-head">
+                <h2>Selected Projects</h2>
+                <div class="filters">
+                    <a class="active" data-cat="all">All</a>
+                    <a data-cat="graphic">Graphic</a>
+                    <a data-cat="uiux">UI/UX</a>
+                    <a data-cat="htmlcss">Front-end</a>
+                    <a data-cat="Three-dimensional">3D</a>
+                    <a data-cat="video">Video</a>
+                </div>
+            </div>
+
+            <div class="grid">
+                <a href="./project-ecommerce.html" class="card graphic">
+                    <div class="thumb"><img loading="lazy" src="./images/marketing/618-marais-1.jpg" alt="電商行銷視覺"></div>
+                    <div class="meta"><h3>電商行銷視覺</h3><span class="cat">Marketing</span></div>
+                </a>
+                <a href="./project-ads.html" class="card graphic video">
+                    <div class="thumb"><img loading="lazy" src="./images/ads/belkin-1.jpg" alt="品牌產品廣告"></div>
+                    <div class="meta"><h3>品牌產品廣告</h3><span class="cat">Advertising</span></div>
+                </a>
+                <a href="./project-MYFEEL UIUX.html" class="card uiux">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/Project-1.png" alt="MYFEEL 集資平台" style="object-position: 22% center;"></div>
+                    <div class="meta"><h3>MYFEEL 集資平台</h3><span class="cat">UI/UX</span></div>
+                </a>
+                <a href="./project-zangan.html" class="card uiux htmlcss">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/Project-2.png" alt="蘵感美學補習班"></div>
+                    <div class="meta"><h3>蘵感美學補習班</h3><span class="cat">UI/UX · Front-end</span></div>
+                </a>
+                <a href="./project-HAVBEAT UI.html" class="card uiux">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/Project-3.png" alt="HAVBEAT"></div>
+                    <div class="meta"><h3>HAVBEAT 運動平台</h3><span class="cat">UI/UX</span></div>
+                </a>
+                <a href="./project-YSOLAR UI.html" class="card uiux">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/Project-4.png" alt="力陽能源"></div>
+                    <div class="meta"><h3>力陽能源</h3><span class="cat">UI/UX</span></div>
+                </a>
+                <a href="./project-travel.html" class="card uiux">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/Project-5.png" alt="高端旅遊"></div>
+                    <div class="meta"><h3>高端旅遊</h3><span class="cat">UI/UX</span></div>
+                </a>
+                <a href="./project-Turtle Island UIUX.html" class="card uiux">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/Project-6.png" alt="龜山島登島申請"></div>
+                    <div class="meta"><h3>龜山島登島申請</h3><span class="cat">UI/UX</span></div>
+                </a>
+                <a href="./project-FEEL2.html" class="card Three-dimensional video">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/Project-7.png" alt="FEEL2 音樂唱盤" style="object-position: 62% center;"></div>
+                    <div class="meta"><h3>FEEL2 音樂唱盤</h3><span class="cat">Product · 3D</span></div>
+                </a>
+                <a href="./project-2023 MYFEEL CIS.html" class="card graphic">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/Project-8.png" alt="MYFEEL CIS" style="object-position: 32% center;"></div>
+                    <div class="meta"><h3>MYFEEL CIS</h3><span class="cat">Branding</span></div>
+                </a>
+                <a href="./project-Belkin.html" class="card graphic video">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/Project-9.png" alt="Belkin Immerse"></div>
+                    <div class="meta"><h3>Belkin Immerse</h3><span class="cat">Advertising</span></div>
+                </a>
+                <a href="./project-PHILIPS.html" class="card graphic video">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/Project-10.png" alt="PHILIPS 白小奈" style="object-position: 60% center;"></div>
+                    <div class="meta"><h3>PHILIPS 白小奈</h3><span class="cat">Advertising</span></div>
+                </a>
+            </div>
         </section>
     </main>
+
+    <script>
+        const filters = document.querySelectorAll('.filters a');
+        const cards = document.querySelectorAll('.grid .card');
+        filters.forEach(f => f.addEventListener('click', () => {
+            filters.forEach(x => x.classList.remove('active'));
+            f.classList.add('active');
+            const cat = f.dataset.cat;
+            cards.forEach(c => {
+                c.style.display = (cat === 'all' || c.classList.contains(cat)) ? '' : 'none';
+            });
+        }));
+    </script>
 </body>
 
 </html>

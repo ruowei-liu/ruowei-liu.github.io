@@ -7,8 +7,8 @@ const SITE_NEW = {
   behance: "https://www.behance.net/ruowei2020da6c",
   linkedin: "https://www.linkedin.com/in/vera-liu-8b979a27a",
   resume: "./Vera Resume.pdf",
-  projects: "./index-new.html",
-  about: "./about-new.html",
+  projects: "./index.html",
+  about: "./about.html",
 };
 
 const navHTML = `
