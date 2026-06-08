@@ -42,15 +42,15 @@
                     <div class="about-rowlabel">數字</div>
                     <div class="about-stats">
                         <div class="about-stat">
-                            <div class="about-stat-num">8<sup>年</sup></div>
+                            <div class="about-stat-num"><span class="count-up" data-target="8">0</span><sup>年</sup></div>
                             <div class="about-stat-label">商業設計經驗</div>
                         </div>
                         <div class="about-stat">
-                            <div class="about-stat-num">100<sup>%</sup></div>
+                            <div class="about-stat-num"><span class="count-up" data-target="100">0</span><sup>%</sup></div>
                             <div class="about-stat-label">回覆率</div>
                         </div>
                         <div class="about-stat">
-                            <div class="about-stat-num">100<sup>%</sup></div>
+                            <div class="about-stat-num"><span class="count-up" data-target="100">0</span><sup>%</sup></div>
                             <div class="about-stat-label">交稿準時率</div>
                         </div>
                     </div>
@@ -153,6 +153,28 @@
             </div>
         </div>
     </main>
+    <script>
+        function animateCount(el, target, duration) {
+            const start = performance.now();
+            (function update(now) {
+                const p = Math.min((now - start) / duration, 1);
+                const ease = 1 - Math.pow(1 - p, 4); // easeOutQuart
+                el.textContent = Math.round(ease * target);
+                if (p < 1) requestAnimationFrame(update);
+            })(start);
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                animateCount(el, +el.dataset.target, 1400);
+                observer.unobserve(el);
+            });
+        }, { threshold: 0.6 });
+
+        document.querySelectorAll('.count-up').forEach(el => observer.observe(el));
+    </script>
 </body>
 
 </html>
