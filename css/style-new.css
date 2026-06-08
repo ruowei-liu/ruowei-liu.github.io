@@ -247,3 +247,69 @@ main.project { max-width: 1340px; margin: 0 auto; }
   .about-row { grid-template-columns: 1fr; gap: 10px; padding: 32px 0; }
   .about-rowlabel { padding-top: 0; }
 }
+
+/* ---------- 接案 About 新增樣式 ---------- */
+
+/* 中文大標調整 */
+.about-statement-zh {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700; line-height: 1.4; letter-spacing: 0.01em;
+}
+.about-statement-zh em { font-style: normal; color: var(--muted); font-weight: 500; }
+
+/* 數字統計 */
+.about-stats { display: flex; flex-wrap: wrap; gap: 28px 56px; }
+.about-stat { }
+.about-stat-num {
+  font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700;
+  letter-spacing: -0.04em; line-height: 1; color: var(--ink);
+}
+.about-stat-num sup { font-size: .5em; vertical-align: super; }
+.about-stat-label { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+
+/* 合作品牌 */
+.about-brands { display: flex; flex-wrap: wrap; gap: 10px; }
+.about-brands span {
+  font-size: 13px; color: #555; border: 1px solid var(--line);
+  padding: 6px 14px; border-radius: 100px; background: var(--surface);
+}
+
+/* 服務項目 */
+.service-list { display: flex; flex-direction: column; gap: 0; }
+.service-item {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: 16px 0; border-bottom: 1px solid var(--line); gap: 16px;
+}
+.service-item:last-child { border-bottom: none; }
+.service-name { font-size: 15px; font-weight: 500; }
+.service-note { font-size: 13px; color: var(--muted); }
+
+/* 包月方案 */
+.pkg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pkg-card {
+  border: 1px solid var(--line); border-radius: 12px; padding: 24px 20px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.pkg-tag {
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted);
+}
+.pkg-name { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+.pkg-desc { font-size: 14px; color: #555; line-height: 1.7; flex: 1; }
+.pkg-cta {
+  font-size: 13px; font-weight: 500; color: var(--ink);
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 4px;
+}
+.pkg-cta::after { content: "→"; transition: transform .2s; }
+.pkg-cta:hover::after { transform: translateX(4px); }
+.pkg-card.featured { background: var(--ink); border-color: var(--ink); }
+.pkg-card.featured .pkg-tag,
+.pkg-card.featured .pkg-name,
+.pkg-card.featured .pkg-desc,
+.pkg-card.featured .pkg-cta { color: #fff; }
+
+@media (max-width: 760px) {
+  .pkg-grid { grid-template-columns: 1fr; }
+  .about-stats { gap: 20px 40px; }
+}
