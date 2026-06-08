@@ -44,12 +44,4 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.insertAdjacentHTML("beforeend", footHTML);
   const yr = document.getElementById("yr");
   if (yr) yr.textContent = new Date().getFullYear();
-
-  // 導覽列：最上方透明，捲動後浮現霧面底
-  const nav = document.querySelector(".nav");
-  if (nav) {
-    const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-  }
 });
