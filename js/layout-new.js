@@ -4,8 +4,7 @@
    ========================================================= */
 const SITE_NEW = {
   email: "vera83610942@gmail.com",
-  behance: "https://www.behance.net/ruowei2020da6c",
-  linkedin: "https://www.linkedin.com/in/vera-liu-8b979a27a",
+  line: "https://line.me/ti/p/~@208bjlaw",
   resume: "./Vera Resume.pdf",
   projects: "./index.html",
   about: "./about.html",
@@ -32,8 +31,8 @@ const footHTML = `
       <span>© <span id="yr"></span> Vera — Taipei, Taiwan</span>
       <span class="links">
         <a href="${SITE_NEW.about}">About</a>
-        <a href="${SITE_NEW.behance}" target="_blank" rel="noopener">Behance</a>
-        <a href="${SITE_NEW.linkedin}" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:${SITE_NEW.email}">Email</a>
+        <a href="${SITE_NEW.line}" target="_blank" rel="noopener">LINE</a>
       </span>
     </div>
   </div>
