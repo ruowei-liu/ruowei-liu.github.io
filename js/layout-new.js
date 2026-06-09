@@ -17,8 +17,7 @@ const navHTML = `
     <nav class="nav-links">
       <a href="${SITE_NEW.projects}">Projects</a>
       <a href="${SITE_NEW.about}">About</a>
-      <a href="${SITE_NEW.resume}" target="_blank" rel="noopener">Resume</a>
-      <a href="mailto:${SITE_NEW.email}" class="nav-cta">Get in touch</a>
+      <a href="${SITE_NEW.line}" target="_blank" rel="noopener" class="nav-cta">Get in touch</a>
     </nav>
   </div>
 </header>`;
@@ -26,7 +25,7 @@ const navHTML = `
 const footHTML = `
 <footer class="foot">
   <div class="wrap">
-    <p class="cta">想合作或聊聊？<br><a href="mailto:${SITE_NEW.email}">${SITE_NEW.email}</a></p>
+    <p class="cta">想合作或聊聊？<br><a href="${SITE_NEW.line}" target="_blank" rel="noopener">LINE 找我</a></p>
     <div class="foot-row">
       <span>© <span id="yr"></span> Vera — Taipei, Taiwan</span>
       <span class="links">
