@@ -303,20 +303,12 @@ main.project { max-width: 1340px; margin: 0 auto; }
 /* 包月方案 */
 .pkg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .pkg-card {
-  border: 1px solid var(--line); border-radius: 12px; padding: 24px 20px;
+  background: var(--surface); border: 1.5px solid var(--ink);
+  border-radius: 12px; padding: 24px 20px;
   display: flex; flex-direction: column; gap: 12px;
-  transition: transform .3s ease, background .3s ease, border-color .3s ease;
+  transition: border-color .25s ease;
 }
-.pkg-card:hover {
-  transform: translateY(-6px);
-  background: rgba(215, 243, 103, 0.18);
-  border-color: var(--lime);
-}
-.pkg-card.featured:hover {
-  transform: translateY(-6px);
-  background: #2a2a2a;
-  border-color: var(--lime);
-}
+.pkg-card:hover { border-color: var(--lime); }
 .pkg-tag {
   font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--muted);
@@ -329,11 +321,6 @@ main.project { max-width: 1340px; margin: 0 auto; }
 }
 .pkg-cta::after { content: "→"; transition: transform .2s; }
 .pkg-cta:hover::after { transform: translateX(4px); }
-.pkg-card.featured { background: var(--ink); border-color: var(--ink); }
-.pkg-card.featured .pkg-tag,
-.pkg-card.featured .pkg-name,
-.pkg-card.featured .pkg-desc,
-.pkg-card.featured .pkg-cta { color: #fff; }
 
 @media (max-width: 760px) {
   .pkg-grid { grid-template-columns: 1fr; }
