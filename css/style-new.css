@@ -105,15 +105,25 @@ img { display: block; max-width: 100%; }
 }
 .card .thumb img {
   width: 100%; height: 100%; object-fit: cover; display: block;
-  transition: transform .6s cubic-bezier(.2,.7,.2,1);
 }
-.card .thumb::after {
-  content: ''; position: absolute; inset: 0;
-  background: rgba(0, 0, 0, 0.38);
-  border-radius: 6px;
+.thumb-overlay {
+  position: absolute; inset: 0; z-index: 2; border-radius: 6px;
+  background: rgba(12,12,12,.68);
+  display: flex; flex-direction: column;
+  justify-content: space-between; padding: 16px;
   opacity: 0; transition: opacity .35s ease;
 }
-.card:hover .thumb::after { opacity: 1; }
+.thumb-overlay-cat {
+  align-self: flex-end;
+  background: rgba(255,255,255,.15);
+  color: #fff; font-size: 12px; letter-spacing: .04em;
+  padding: 5px 12px; border-radius: 100px;
+}
+.thumb-overlay-title {
+  color: #fff; font-size: 1.1rem; font-weight: 600;
+  letter-spacing: -0.01em; line-height: 1.35;
+}
+.card:hover .thumb-overlay { opacity: 1; }
 .card .meta {
   display: flex; align-items: baseline; justify-content: space-between;
   margin-top: 16px; gap: 16px;
