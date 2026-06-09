@@ -39,7 +39,7 @@ const footerHTML = `
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <h3 class="en-3">Vera Liu</h3>
+      <h3 class="en-3">Vera</h3>
       <p class="en-4">Designer &amp; Front-end Developer, based in Taipei.</p>
     </div>
     <nav class="footer-nav" aria-label="footer">
@@ -53,7 +53,7 @@ const footerHTML = `
       <a href="mailto:${SITE.email}" class="en-4">Email</a>
     </div>
   </div>
-  <p class="footer-copy en-4">© <span id="footer-year"></span> Vera Liu. All rights reserved.</p>
+  <p class="footer-copy en-4">© <span id="footer-year"></span> Vera. All rights reserved.</p>
 </footer>`;
 
 document.addEventListener("DOMContentLoaded", () => {
