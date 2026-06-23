@@ -8,7 +8,7 @@ from PIL import Image as PILImage
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 WORK = os.path.join(ROOT, "images", "work")
-VER = "20260623b"
+VER = "20260623c"
 
 def natkey(s):
     return [int(t) if t.isdigit() else t.lower() for t in re.split(r'(\d+)', s)]
