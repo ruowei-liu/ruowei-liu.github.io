@@ -18,103 +18,124 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style-new.css">
-    <script src="./js/layout-new.js"></script>
+    <link rel="stylesheet" href="./css/style-new.css?v=20260623a">
+    <script src="./js/layout-new.js?v=20260623a"></script>
 </head>
 
 <body>
     <main class="wrap">
         <section class="hero">
-            <p class="eyebrow">Commercial Graphic Designer · Taipei</p>
-            <h1>Graphic design built<br><em>to attract, convert & sell.</em></h1>
+            <p class="eyebrow">商業平面設計師 · 台北</p>
+            <h1>吸引目光・創造轉換<br><em>促成銷售的設計。</em></h1>
             <p class="sub">
-                Hi，我是 Vera — 專注商業平面設計的接案設計師。廣告圖、貼文視覺、LP 介紹頁，
-                8 年經驗、交稿準時率 100%，合作品牌橫跨電商、3C、食品、家電。
+                Hi，我是 Vera — 專注商業平面設計的接案設計師。<br>
+                8 年經驗、交稿準時率 100%，合作品牌橫跨電商、3C、食品、家電，以及健身、保養與生活風格。
             </p>
-            <div class="tags">
-                <span>廣告圖設計</span>
-                <span>貼文 / 限時動態</span>
-                <span>LP 介紹頁</span>
-                <span>品牌視覺</span>
-                <span>UI/UX</span>
+            <div class="tags filters" id="workFilters">
+                <span class="active" data-cat="all">全部作品</span>
+                <span data-cat="ad">廣告圖設計</span>
+                <span data-cat="social">貼文 / 限時動態</span>
+                <span data-cat="lp">LP 介紹頁</span>
+                <span data-cat="brand">品牌視覺</span>
+                <span data-cat="uiux">UI/UX</span>
             </div>
         </section>
 
         <section class="work">
-            <div class="work-head">
-                <h2>Selected Projects</h2>
-                <div class="filters">
-                    <a class="active" data-cat="all">All</a>
-                    <a data-cat="graphic">Graphic</a>
-                    <a data-cat="uiux">UI/UX</a>
-                </div>
-            </div>
-
-            <div class="grid">
-                <a href="./project-ecommerce.html" class="card graphic">
-                    <div class="thumb">
-                        <img loading="lazy" src="./images/marketing/618-marais-1.jpg" alt="電商行銷視覺">
-                        <div class="thumb-overlay"><span class="thumb-overlay-cat">Marketing</span><span class="thumb-overlay-title">電商行銷視覺</span></div>
-                    </div>
-                    <div class="meta"><h3>電商行銷視覺</h3><span class="cat">Marketing</span></div>
+            <div class="grid" id="workGrid">
+                <a href="./project-gym-mars.html" class="card" data-tags="social ad">
+                    <div class="thumb"><img loading="lazy" src="./images/work/gym-mars/cover-8.png" alt="gym mars 健身房"></div>
+                    <div class="meta"><h3>gym mars 健身房</h3><span class="cat">gym mars</span></div>
                 </a>
-                <a href="./project-ads.html" class="card graphic">
-                    <div class="thumb">
-                        <img loading="lazy" src="./images/ads/belkin-1.jpg" alt="品牌產品廣告">
-                        <div class="thumb-overlay"><span class="thumb-overlay-cat">Advertising</span><span class="thumb-overlay-title">品牌產品廣告</span></div>
-                    </div>
-                    <div class="meta"><h3>品牌產品廣告</h3><span class="cat">Advertising</span></div>
+                <a href="./project-mars.html" class="card" data-tags="ad social">
+                    <div class="thumb"><img loading="lazy" src="./images/work/mars/cover-5.png" alt="MARS 高蛋白粉"></div>
+                    <div class="meta"><h3>MARS 高蛋白粉</h3><span class="cat">MARS</span></div>
                 </a>
-                <a href="./project-2023 MYFEEL CIS.html" class="card graphic">
-                    <div class="thumb">
-                        <img loading="lazy" src="./images/Project/Project-8.png" alt="MYFEEL CIS" style="object-position: 32% center;">
-                        <div class="thumb-overlay"><span class="thumb-overlay-cat">Branding</span><span class="thumb-overlay-title">MYFEEL CIS</span></div>
-                    </div>
-                    <div class="meta"><h3>MYFEEL CIS</h3><span class="cat">Branding</span></div>
+                <a href="./project-legin.html" class="card" data-tags="social ad">
+                    <div class="thumb"><img loading="lazy" src="./images/work/legin%20%E7%9A%AE%E6%8B%89%E6%8F%90%E6%96%AF/cover-6.png" alt="Legin 皮拉提斯"></div>
+                    <div class="meta"><h3>Legin 皮拉提斯</h3><span class="cat">Legin</span></div>
                 </a>
-                <a href="./project-Belkin.html" class="card graphic">
-                    <div class="thumb">
-                        <img loading="lazy" src="./images/Project/Project-9.png" alt="Belkin Immerse">
-                        <div class="thumb-overlay"><span class="thumb-overlay-cat">Advertising</span><span class="thumb-overlay-title">Belkin Immerse</span></div>
-                    </div>
-                    <div class="meta"><h3>Belkin Immerse</h3><span class="cat">Advertising</span></div>
+                <a href="./project-marais-618.html" class="card" data-tags="ad brand">
+                    <div class="thumb"><img loading="lazy" src="./images/work/marais-618/cover-7.png" alt="MARAIS 618 理想生活提案"></div>
+                    <div class="meta"><h3>MARAIS 618 理想生活提案</h3><span class="cat">MARAIS</span></div>
                 </a>
-                <a href="./project-PHILIPS.html" class="card graphic">
-                    <div class="thumb">
-                        <img loading="lazy" src="./images/Project/Project-10.png" alt="PHILIPS 白小奈" style="object-position: 60% center;">
-                        <div class="thumb-overlay"><span class="thumb-overlay-cat">Advertising</span><span class="thumb-overlay-title">PHILIPS 白小奈</span></div>
-                    </div>
-                    <div class="meta"><h3>PHILIPS 白小奈</h3><span class="cat">Advertising</span></div>
+                <a href="./project-newyear.html" class="card" data-tags="ad brand">
+                    <div class="thumb"><img loading="lazy" src="./images/work/newyear/cover.png" alt="團圓年菜大賞"></div>
+                    <div class="meta"><h3>團圓年菜大賞</h3><span class="cat">MARAIS</span></div>
                 </a>
-                <a href="./project-MYFEEL UIUX.html" class="card uiux">
-                    <div class="thumb">
-                        <img loading="lazy" src="./images/Project/Project-1.png" alt="MYFEEL 集資平台" style="object-position: 22% center;">
-                        <div class="thumb-overlay"><span class="thumb-overlay-cat">UI/UX</span><span class="thumb-overlay-title">MYFEEL 集資平台</span></div>
-                    </div>
+                <a href="./project-PHILIPS.html" class="card" data-tags="lp ad">
+                    <div class="thumb"><img loading="lazy" src="./images/work/philips/cover.png" alt="PHILIPS 白小奈空氣清淨機"></div>
+                    <div class="meta"><h3>PHILIPS 白小奈</h3><span class="cat">PHILIPS</span></div>
+                </a>
+                <a href="./project-sharp-hairdryer.html" class="card" data-tags="lp ad">
+                    <div class="thumb"><img loading="lazy" src="./images/work/sharp-hairdryer/cover-1.png" alt="SHARP 雙氣流智慧吹風機"></div>
+                    <div class="meta"><h3>SHARP 雙氣流吹風機</h3><span class="cat">SHARP</span></div>
+                </a>
+                <a href="./project-belkin.html" class="card" data-tags="lp ad">
+                    <div class="thumb"><img loading="lazy" src="./images/work/belkin/cover.png" alt="Belkin SOUNDFORM Immerse 降噪耳機"></div>
+                    <div class="meta"><h3>Belkin Immerse 降噪耳機</h3><span class="cat">Belkin</span></div>
+                </a>
+                <a href="./project-sharp-allday.html" class="card" data-tags="lp ad">
+                    <div class="thumb"><img loading="lazy" src="./images/work/sharp-allday/cover-3.png" alt="SHARP all day"></div>
+                    <div class="meta"><h3>SHARP all day</h3><span class="cat">SHARP</span></div>
+                </a>
+                <a href="./project-niconico-snack.html" class="card" data-tags="lp ad">
+                    <div class="thumb"><img loading="lazy" src="./images/work/niconico-snack/cover-2.png" alt="NICONICO 小食曆"></div>
+                    <div class="meta"><h3>NICONICO 小食曆</h3><span class="cat">NICONICO</span></div>
+                </a>
+                <a href="./project-niconico-skewer.html" class="card" data-tags="lp ad">
+                    <div class="thumb"><img loading="lazy" src="./images/work/niconico-skewer/cover-4.png" alt="NICONICO 旋轉吧！串串"></div>
+                    <div class="meta"><h3>NICONICO 旋轉吧！串串</h3><span class="cat">NICONICO</span></div>
+                </a>
+                <a href="./project-baby.html" class="card" data-tags="lp ad">
+                    <div class="thumb"><img loading="lazy" src="./images/work/baby/cover-12.png" alt="寶寶吹風機"></div>
+                    <div class="meta"><h3>寶寶吹風機</h3><span class="cat">BLAUPUNKT</span></div>
+                </a>
+                <a href="./project-furimori.html" class="card" data-tags="lp ad">
+                    <div class="thumb"><img loading="lazy" src="./images/work/FURIMORI%20%E5%92%96%E5%95%A1%E6%A9%9F/cover-3.png" alt="FURIMORI 咖啡機"></div>
+                    <div class="meta"><h3>FURIMORI 咖啡機</h3><span class="cat">FURIMORI</span></div>
+                </a>
+                <a href="./project-queen-day.html" class="card" data-tags="ad brand">
+                    <div class="thumb"><img loading="lazy" src="./images/work/queen-day/cover-11.png" alt="38 購物女王節"></div>
+                    <div class="meta"><h3>38 購物女王節</h3><span class="cat">MARAIS</span></div>
+                </a>
+                <a href="./project-marais-summer.html" class="card" data-tags="ad brand">
+                    <div class="thumb"><img loading="lazy" src="./images/work/marais-summer/cover-10.png" alt="MARAIS 夏日生活節"></div>
+                    <div class="meta"><h3>MARAIS 夏日生活節</h3><span class="cat">MARAIS</span></div>
+                </a>
+                <a href="./project-MYFEEL%20UIUX.html" class="card" data-tags="uiux">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/cover-myfeel-platform.png" alt="MYFEEL 集資平台"></div>
                     <div class="meta"><h3>MYFEEL 集資平台</h3><span class="cat">UI/UX</span></div>
                 </a>
-                <a href="./project-zangan.html" class="card uiux">
-                    <div class="thumb">
-                        <img loading="lazy" src="./images/Project/Project-2.png" alt="蘵感美學補習班">
-                        <div class="thumb-overlay"><span class="thumb-overlay-cat">UI/UX · Front-end</span><span class="thumb-overlay-title">蘵感美學補習班</span></div>
-                    </div>
+                <a href="./project-zangan.html" class="card" data-tags="uiux">
+                    <div class="thumb"><img loading="lazy" src="./images/Project/cover-zangan.png" alt="蘵感美學補習班"></div>
                     <div class="meta"><h3>蘵感美學補習班</h3><span class="cat">UI/UX · Front-end</span></div>
                 </a>
             </div>
+            <p class="work-empty" id="workEmpty" hidden>此分類暫無作品</p>
         </section>
     </main>
 
     <script>
-        const filters = document.querySelectorAll('.filters a');
-        const cards = document.querySelectorAll('.grid .card');
-        filters.forEach(f => f.addEventListener('click', () => {
-            filters.forEach(x => x.classList.remove('active'));
-            f.classList.add('active');
-            const cat = f.dataset.cat;
-            cards.forEach(c => {
-                c.style.display = (cat === 'all' || c.classList.contains(cat)) ? '' : 'none';
+        (function () {
+            var filters = document.querySelectorAll('#workFilters span');
+            var cards = document.querySelectorAll('#workGrid .card');
+            var empty = document.getElementById('workEmpty');
+            filters.forEach(function (f) {
+                f.addEventListener('click', function () {
+                    filters.forEach(function (x) { x.classList.remove('active'); });
+                    f.classList.add('active');
+                    var cat = f.dataset.cat, shown = 0;
+                    cards.forEach(function (card) {
+                        var tags = (card.dataset.tags || '').split(' ');
+                        var on = (cat === 'all' || tags.indexOf(cat) !== -1);
+                        card.style.display = on ? '' : 'none';
+                        if (on) shown++;
+                    });
+                    if (empty) empty.hidden = shown !== 0;
+                });
             });
-        }));
+        })();
     </script>
 </body>
 

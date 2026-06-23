@@ -14,3 +14,10 @@ js/jquery-3.7.0.min.js
 
 # 圖文範本（本機參考用，不公開）
 project（圖文範本）.html
+
+# 移除備份與內部檔（不上架）
+_removed/
+_project-notes.md
+
+# Illustrator 原始檔（不上架、未用於網站）
+*.ai
