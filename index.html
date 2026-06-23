@@ -18,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style-new.css?v=20260623a">
-    <script src="./js/layout-new.js?v=20260623a"></script>
+    <link rel="stylesheet" href="./css/style-new.css?v=20260623b">
+    <script src="./js/layout-new.js?v=20260623b"></script>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
             <p class="eyebrow">商業平面設計師 · 台北</p>
             <h1>吸引目光・創造轉換<br><em>促成銷售的設計。</em></h1>
             <p class="sub">
-                Hi，我是 Vera — 專注商業平面設計的接案設計師。<br>
+                Hi，我是 Vera — 專注商業平面設計的接案設計師。<br class="sub-br">
                 8 年經驗、交稿準時率 100%，合作品牌橫跨電商、3C、食品、家電，以及健身、保養與生活風格。
             </p>
             <div class="tags filters" id="workFilters">
@@ -121,20 +121,28 @@
             var filters = document.querySelectorAll('#workFilters span');
             var cards = document.querySelectorAll('#workGrid .card');
             var empty = document.getElementById('workEmpty');
-            filters.forEach(function (f) {
-                f.addEventListener('click', function () {
-                    filters.forEach(function (x) { x.classList.remove('active'); });
-                    f.classList.add('active');
-                    var cat = f.dataset.cat, shown = 0;
-                    cards.forEach(function (card) {
-                        var tags = (card.dataset.tags || '').split(' ');
-                        var on = (cat === 'all' || tags.indexOf(cat) !== -1);
-                        card.style.display = on ? '' : 'none';
-                        if (on) shown++;
-                    });
-                    if (empty) empty.hidden = shown !== 0;
+            function apply(cat) {
+                var shown = 0;
+                filters.forEach(function (x) { x.classList.toggle('active', x.dataset.cat === cat); });
+                cards.forEach(function (card) {
+                    var tags = (card.dataset.tags || '').split(' ');
+                    var on = (cat === 'all' || tags.indexOf(cat) !== -1);
+                    card.style.display = on ? '' : 'none';
+                    if (on) shown++;
                 });
+                if (empty) empty.hidden = shown !== 0;
+            }
+            filters.forEach(function (f) {
+                f.addEventListener('click', function () { apply(f.dataset.cat); });
             });
+            // 從漢堡選單帶 ?cat= 進來時，自動套用該分類篩選並捲到作品區
+            var cat = new URLSearchParams(location.search).get('cat');
+            var valid = ['ad', 'social', 'lp', 'brand', 'uiux'];
+            if (cat && valid.indexOf(cat) !== -1) {
+                apply(cat);
+                var work = document.querySelector('.work');
+                if (work) work.scrollIntoView();
+            }
         })();
     </script>
 </body>

@@ -74,11 +74,16 @@ img { display: block; max-width: 100%; }
   background: var(--lime);
 }
 .hero h1 {
-  font-size: clamp(2.1rem, 5vw, 4.2rem);
-  font-weight: 600; line-height: 1.12; letter-spacing: -0.035em;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(1.9rem, 4.2vw, 3.2rem);
+  font-weight: 700; line-height: 1.4; letter-spacing: 0.01em;
   max-width: none;
 }
-.hero h1 em { font-style: normal; color: var(--muted); }
+.hero h1 em {
+  font-style: normal; font-weight: 700;
+  background: var(--lime); padding: 0 6px 2px; border-radius: 3px;
+  color: var(--ink);
+}
 .hero .sub {
   margin-top: 28px; color: #555;
   font-size: 17px; line-height: 1.6;
@@ -331,6 +336,10 @@ main.project { max-width: 1340px; margin: 0 auto; }
 
   /* 選單開啟時鎖住背景捲動 */
   body.nav-open { overflow: hidden; }
+  /* 選單開啟時 header 改白底（不透明） */
+  body.nav-open .nav { background: var(--surface); backdrop-filter: none; }
+  /* 手機版：自我介紹兩句合成一段（隱藏換行） */
+  .hero .sub .sub-br { display: none; }
 }
 
 @media (max-width: 560px) {
