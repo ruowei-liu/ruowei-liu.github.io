@@ -140,7 +140,7 @@ img { display: block; max-width: 100%; }
 
 /* ---------- 頁尾 ---------- */
 .foot { border-top: 1px solid var(--line); padding: 80px 0 40px; }
-.foot .cta { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; }
+.foot .cta { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; overflow-wrap: anywhere; }
 .foot .cta a { border-bottom: 2px solid var(--lime); }
 .foot .cta a:hover { background: var(--lime); }
 .foot-row {
@@ -153,7 +153,7 @@ img { display: block; max-width: 100%; }
 /* ---------- About 頁 ---------- */
 main.about { max-width: 1340px; margin: 0 auto; }
 .about-grid {
-  display: grid; grid-template-columns: 200px 1fr; gap: 72px;
+  display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 72px;
   padding: 64px 0 16px; align-items: start;
 }
 .about-pagetitle {
@@ -165,8 +165,10 @@ main.about { max-width: 1340px; margin: 0 auto; }
   content: ""; width: 10px; height: 10px; border-radius: 50%;
   background: var(--lime); flex-shrink: 0;
 }
-.about-content { display: flex; flex-direction: column; }
-.about-row { display: grid; grid-template-columns: 150px 1fr; gap: 48px; padding: 44px 0; }
+.about-content { display: flex; flex-direction: column; min-width: 0; }
+/* grid/flex 子項目預設 min-width:auto 會把軌道頂寬，歸零才能在窄畫面正常收合 */
+.about-grid > *, .about-row > * { min-width: 0; }
+.about-row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 48px; padding: 44px 0; }
 .about-row:not(:first-child) { border-top: 1px solid var(--line); }
 .about-rowlabel { font-size: 14px; color: var(--muted); padding-top: 6px; line-height: 1.5; }
 .about-statement {
@@ -340,6 +342,8 @@ main.project { max-width: 1340px; margin: 0 auto; }
   body.nav-open .nav { background: var(--surface); backdrop-filter: none; }
   /* 手機版：自我介紹兩句合成一段（隱藏換行） */
   .hero .sub .sub-br { display: none; }
+  /* 手機版頁尾：字級縮小，讓 email 能整串一行不斷字 */
+  .foot .cta { font-size: 1.6rem; }
 }
 
 @media (max-width: 560px) {
@@ -347,9 +351,9 @@ main.project { max-width: 1340px; margin: 0 auto; }
 }
 
 @media (max-width: 860px) {
-  .about-grid { grid-template-columns: 1fr; gap: 24px; padding: 40px 0 8px; }
+  .about-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 40px 0 8px; }
   .about-pagetitle { position: static; }
-  .about-row { grid-template-columns: 1fr; gap: 10px; padding: 32px 0; }
+  .about-row { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 32px 0; }
   .about-rowlabel { padding-top: 0; }
 }
 
