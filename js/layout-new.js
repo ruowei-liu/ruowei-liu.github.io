@@ -96,4 +96,34 @@ document.addEventListener("DOMContentLoaded", () => {
     let t;
     window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(layoutLP, 150); });
   }
+
+  // ---- 進場動態：滾動淡入 + 輕微上浮 ----
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    // 各區塊要套進場動畫的目標；mod 設定可讓同一排元素左→右錯開
+    const groups = [
+      { sel: ".hero .eyebrow, .hero h1, .hero .sub, .hero .tags", step: 90 },   // 首頁 hero
+      { sel: "#workGrid .card", step: 90, mod: 3 },                             // 首頁作品卡（每排 3 張錯開）
+      { sel: ".about-pagetitle, .about-row", step: 0 },                         // About 各區塊
+      { sel: ".proj-side, .proj-main > *, .proj-nav", step: 0 },                // 作品內頁各區塊
+      { sel: ".foot .cta", step: 0 },                                          // 頁尾大標
+    ];
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("is-visible");
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+    groups.forEach((g) => {
+      document.querySelectorAll(g.sel).forEach((el, i) => {
+        if (el.classList.contains("reveal")) return; // 避免重複
+        el.classList.add("reveal");
+        const idx = g.mod ? (i % g.mod) : 0;
+        if (g.step) el.style.transitionDelay = Math.min(idx * g.step, 480) + "ms";
+        io.observe(el);
+      });
+    });
+  }
 });
